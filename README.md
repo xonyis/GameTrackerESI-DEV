@@ -19,6 +19,14 @@ dotnet run --project GameTracker.Web
 ```
 → http://localhost:5200
 
+**Créer la solution :**
+```bash
+dotnet new sln -n GameTracker -o .
+dotnet sln add GameTracker.csproj
+dotnet sln add GameTracker.Tests/GameTracker.Tests.csproj
+dotnet sln add GameTracker.Web/GameTracker.Web.csproj
+```
+
 ## Tests
 
 ```bash
