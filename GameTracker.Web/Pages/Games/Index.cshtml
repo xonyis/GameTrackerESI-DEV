@@ -1,0 +1,42 @@
+@page
+@model GameTracker.Web.Pages.Games.IndexModel
+@{
+    ViewData["Title"] = "Jeux";
+}
+
+<div class="page-header d-flex justify-content-between align-items-start flex-wrap gap-2">
+    <div>
+        <h1 class="page-title">Jeux</h1>
+        <p class="page-subtitle">Consultez votre catalogue de jeux</p>
+    </div>
+    <a asp-page="/Games/Create" class="btn btn-custom btn-primary-custom">+ Ajouter</a>
+</div>
+<div class="card-custom">
+    <table class="table table-custom mb-0">
+        <thead>
+            <tr>
+                <th>Titre</th>
+                <th>Année</th>
+                <th>Catégorie</th>
+                <th>Studios</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var game in Model.Games)
+            {
+                <tr>
+                    <td><strong>@game.Title</strong></td>
+                    <td>@game.ReleaseYear</td>
+                    <td>@(game.Categories?.Any() == true ? string.Join(", ", game.Categories.Select(c => c.Name)) : "—")</td>
+                    <td>@(game.Studios?.Any() == true ? string.Join(", ", game.Studios.Select(s => s.Name)) : "—")</td>
+                    <td class="text-end">
+                        <a asp-page="/Games/Details" asp-route-id="@game.Id" class="btn btn-custom btn-outline-custom btn-sm">Détails</a>
+                        <a asp-page="/Games/Edit" asp-route-id="@game.Id" class="btn btn-custom btn-outline-custom btn-sm">Modifier</a>
+                        <a asp-page="/Games/Delete" asp-route-id="@game.Id" class="btn btn-custom btn-outline-custom btn-sm">Supprimer</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

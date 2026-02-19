@@ -1,0 +1,35 @@
+@page
+@model GameTracker.Web.Pages.Categories.IndexModel
+@{
+    ViewData["Title"] = "Catégories";
+}
+
+<div class="page-header d-flex justify-content-between align-items-start flex-wrap gap-2">
+    <div>
+        <h1 class="page-title">Catégories</h1>
+        <p class="page-subtitle">Types de jeux disponibles</p>
+    </div>
+    <a asp-page="/Categories/Create" class="btn btn-custom btn-primary-custom">+ Ajouter</a>
+</div>
+<div class="card-custom">
+    <table class="table table-custom mb-0">
+<thead>
+        <tr>
+            <th>Nom</th>
+            <th></th>
+        </tr>
+    </thead>
+        <tbody>
+            @foreach (var cat in Model.Categories)
+            {
+                <tr>
+                    <td><strong>@cat.Name</strong></td>
+                    <td class="text-end">
+                        <a asp-page="/Categories/Edit" asp-route-id="@cat.Id" class="btn btn-custom btn-outline-custom btn-sm">Modifier</a>
+                        <a asp-page="/Categories/Delete" asp-route-id="@cat.Id" class="btn btn-custom btn-outline-custom btn-sm">Supprimer</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

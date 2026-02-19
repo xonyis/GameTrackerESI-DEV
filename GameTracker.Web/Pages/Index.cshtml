@@ -1,0 +1,28 @@
+@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Accueil";
+}
+
+<div class="home-hero">
+    <h1 class="home-title">Game Tracker</h1>
+    <p class="home-lead">Suivez vos jeux, catégories et sessions de jeu.</p>
+</div>
+<nav class="home-nav">
+    <a asp-page="/Games/Index" class="home-link">
+        <span class="home-link-label">Jeux</span>
+        <span class="home-link-desc">Catalogue</span>
+    </a>
+    <a asp-page="/Categories/Index" class="home-link">
+        <span class="home-link-label">Catégories</span>
+        <span class="home-link-desc">RPG, FPS, Aventure…</span>
+    </a>
+    <a asp-page="/Studios/Index" class="home-link">
+        <span class="home-link-label">Studios</span>
+        <span class="home-link-desc">Éditeurs</span>
+    </a>
+    <a asp-page="/Users/Index" class="home-link">
+        <span class="home-link-label">Utilisateurs</span>
+        <span class="home-link-desc">Sessions</span>
+    </a>
+</nav>

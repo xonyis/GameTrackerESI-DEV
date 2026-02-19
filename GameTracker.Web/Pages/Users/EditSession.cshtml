@@ -1,0 +1,28 @@
+@page
+@model GameTracker.Web.Pages.Users.EditSessionModel
+@{
+    ViewData["Title"] = "Modifier la session";
+}
+
+<p><a asp-page="/Users/Details" asp-route-id="@Model.UserId" class="btn-back">← Retour</a></p>
+
+<div class="page-header">
+    <h1 class="page-title">Modifier la session</h1>
+    <p class="page-subtitle">@Model.Username — @Model.GameTitle</p>
+</div>
+
+<form method="post" class="form-custom">
+    <input type="hidden" asp-for="Input.SessionId" />
+    <div class="mb-3">
+        <label asp-for="Input.Date" class="form-label">Date *</label>
+        <input asp-for="Input.Date" type="date" class="form-control" required />
+    </div>
+    <div class="mb-4">
+        <label asp-for="Input.HoursPlayed" class="form-label">Heures jouées *</label>
+        <input asp-for="Input.HoursPlayed" type="number" class="form-control" min="0" required />
+    </div>
+    <div class="form-actions">
+        <button type="submit" class="btn btn-custom btn-primary-custom">Enregistrer</button>
+        <a asp-page="/Users/Details" asp-route-id="@Model.UserId" class="btn btn-custom btn-outline-custom">Annuler</a>
+    </div>
+</form>

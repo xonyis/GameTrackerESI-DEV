@@ -1,0 +1,24 @@
+@page
+@model GameTracker.Web.Pages.Categories.EditModel
+@{
+    ViewData["Title"] = "Modifier la catégorie";
+}
+
+<p><a asp-page="/Categories/Index" class="btn-back">← Retour à la liste</a></p>
+
+<div class="page-header">
+    <h1 class="page-title">Modifier la catégorie</h1>
+</div>
+
+<form method="post" class="form-custom">
+    <input type="hidden" asp-for="Input.Id" />
+    <div class="mb-4">
+        <label asp-for="Input.Name" class="form-label">Nom *</label>
+        <input asp-for="Input.Name" class="form-control" maxlength="100" required />
+        <span asp-validation-for="Input.Name" class="text-danger"></span>
+    </div>
+    <div class="form-actions">
+        <button type="submit" class="btn btn-custom btn-primary-custom">Enregistrer</button>
+        <a asp-page="/Categories/Index" class="btn btn-custom btn-outline-custom">Annuler</a>
+    </div>
+</form>

@@ -1,0 +1,31 @@
+@page
+@model GameTracker.Web.Pages.Games.DeleteModel
+@{
+    ViewData["Title"] = "Supprimer le jeu";
+}
+
+<p><a asp-page="/Games/Index" class="btn-back">← Retour à la liste</a></p>
+
+<div class="page-header">
+    <h1 class="page-title">Supprimer le jeu</h1>
+</div>
+
+@if (Model.Game == null)
+{
+    <p>Jeu non trouvé.</p>
+}
+else
+{
+    <div class="card-custom p-4">
+        <p class="mb-3">Êtes-vous sûr de vouloir supprimer le jeu suivant ?</p>
+        <p class="mb-0"><strong>@Model.Game.Title</strong> (@Model.Game.ReleaseYear)</p>
+        <p class="text-muted small mb-4">@(Model.Game.Categories?.Any() == true ? string.Join(", ", Model.Game.Categories.Select(c => c.Name)) : "")</p>
+        <form method="post">
+            <input type="hidden" asp-for="Id" />
+            <div class="form-actions">
+                <button type="submit" class="btn btn-custom btn-danger-custom">Supprimer</button>
+                <a asp-page="/Games/Index" class="btn btn-custom btn-outline-custom">Annuler</a>
+            </div>
+        </form>
+    </div>
+}

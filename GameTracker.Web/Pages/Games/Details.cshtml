@@ -1,0 +1,74 @@
+@page
+@model GameTracker.Web.Pages.Games.DetailsModel
+@{
+    ViewData["Title"] = "Détail du jeu";
+}
+
+<p class="d-flex gap-2 flex-wrap">
+    <a asp-page="/Games/Index" class="btn-back">← Retour à la liste</a>
+    @if (Model.Game != null)
+    {
+        <a asp-page="/Games/Edit" asp-route-id="@Model.Game.Id" class="btn btn-custom btn-outline-custom btn-sm">Modifier</a>
+    }
+</p>
+
+@if (Model.Game == null)
+{
+    <div class="empty-state card-custom">
+        <div class="empty-state-icon">⚠️</div>
+        <p class="mb-0">Jeu non trouvé.</p>
+    </div>
+}
+else
+{
+    <div class="detail-header">
+        <h1 class="detail-title">@Model.Game.Title</h1>
+        <div class="detail-meta">
+            <span class="detail-badge">@Model.Game.ReleaseYear</span>
+            @if (Model.Game.Categories?.Any() == true)
+            {
+                @foreach (var cat in Model.Game.Categories)
+                {
+                    <span class="detail-badge">@cat.Name</span>
+                }
+            }
+        </div>
+    </div>
+    <div class="card-custom mb-4">
+        <dl class="detail-list mb-0">
+            <dt>Année de sortie</dt>
+            <dd>@Model.Game.ReleaseYear</dd>
+            <dt>Catégories</dt>
+            <dd>@(Model.Game.Categories?.Any() == true ? string.Join(", ", Model.Game.Categories.Select(c => c.Name)) : "—")</dd>
+            <dt>Studios</dt>
+            <dd>@(Model.Game.Studios?.Any() == true ? string.Join(", ", Model.Game.Studios.Select(s => s.Name)) : "—")</dd>
+            <dt>Sessions de jeu</dt>
+            <dd>@Model.Game.PlaySessions.Count</dd>
+        </dl>
+    </div>
+    @if (Model.Game.PlaySessions.Any())
+    {
+        <h5 class="page-title mb-3">Sessions</h5>
+        <div class="card-custom">
+            <table class="table table-custom mb-0">
+                <thead>
+                    <tr>
+                        <th>Utilisateur</th>
+                        <th>Date</th>
+                        <th>Heures</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var session in Model.Game.PlaySessions)
+                    {
+                        <tr>
+                            <td>@session.User?.Username</td>
+                            <td>@session.Date.ToString("dd/MM/yyyy")</td>
+                            <td>@session.HoursPlayed h</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    }
+}

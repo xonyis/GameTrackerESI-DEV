@@ -1,0 +1,80 @@
+@page
+@model GameTracker.Web.Pages.Users.DetailsModel
+@{
+    ViewData["Title"] = "Jeux joués";
+}
+
+<p><a asp-page="/Users/Index" class="btn-back">← Retour à la liste</a></p>
+
+@if (Model.CurrentUser == null)
+{
+    <div class="empty-state card-custom">
+        <div class="empty-state-icon">⚠️</div>
+        <p class="mb-0">Utilisateur non trouvé.</p>
+    </div>
+}
+else
+{
+<div class="page-header d-flex justify-content-between align-items-start flex-wrap gap-2">
+    <div>
+        <h1 class="page-title">Jeux joués par @Model.CurrentUser.Username</h1>
+        <p class="page-subtitle">Catalogue personnel</p>
+    </div>
+    <a asp-page="/Users/AddSession" asp-route-id="@Model.CurrentUser.Id" class="btn btn-custom btn-primary-custom">+ Ajouter une session</a>
+</div>
+    <form method="get" class="mb-4">
+        <input type="hidden" name="id" value="@Model.CurrentUser.Id" />
+        <label for="categoryId" class="form-label me-2">Filtrer par catégorie</label>
+        <div class="d-flex gap-2 flex-wrap align-items-center">
+            <select name="categoryId" id="categoryId" class="form-select form-filter" onchange="this.form.submit()">
+                <option value="">— Toutes —</option>
+                @foreach (var cat in Model.Categories)
+                {
+                    <option value="@cat.Value" selected="@cat.Selected">@cat.Text</option>
+                }
+            </select>
+        </div>
+    </form>
+    @if (Model.GamesPlayed.Any())
+    {
+        <div class="card-custom">
+            <table class="table table-custom mb-0">
+                <thead>
+                    <tr>
+                        <th>Titre</th>
+                        <th>Catégorie</th>
+                        <th>Studios</th>
+                        <th>Heures</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var game in Model.GamesPlayed)
+                    {
+                        var session = game.PlaySessions?.FirstOrDefault();
+                        <tr>
+                            <td><strong>@game.Title</strong></td>
+                            <td>@(game.Categories?.Any() == true ? string.Join(", ", game.Categories.Select(c => c.Name)) : "—")</td>
+                            <td>@(game.Studios?.Any() == true ? string.Join(", ", game.Studios.Select(s => s.Name)) : "—")</td>
+                            <td>@(session != null ? $"{session.HoursPlayed} h" : "—")</td>
+                            <td class="text-end">
+                                @if (session != null)
+                                {
+                                    <a asp-page="/Users/EditSession" asp-route-userId="@Model.CurrentUser!.Id" asp-route-gameId="@game.Id" class="btn btn-custom btn-outline-custom btn-sm">Modifier</a>
+                                }
+                                <a asp-page="/Games/Details" asp-route-id="@game.Id" class="btn btn-custom btn-outline-custom btn-sm">Détails</a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    }
+    else
+    {
+        <div class="empty-state card-custom">
+            <div class="empty-state-icon">🎮</div>
+            <p class="mb-0">Aucun jeu joué pour le moment.</p>
+        </div>
+    }
+}

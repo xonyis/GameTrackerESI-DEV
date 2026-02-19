@@ -1,0 +1,31 @@
+@page
+@model GameTracker.Web.Pages.Users.IndexModel
+@{
+    ViewData["Title"] = "Utilisateurs";
+}
+
+<div class="page-header">
+    <h1 class="page-title">Utilisateurs</h1>
+    <p class="page-subtitle">Joueurs et leurs sessions</p>
+</div>
+<div class="card-custom">
+    <table class="table table-custom mb-0">
+        <thead>
+            <tr>
+                <th>Utilisateur</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var user in Model.Users)
+            {
+                <tr>
+                    <td><strong>@user.Username</strong></td>
+                    <td class="text-end">
+                        <a asp-page="/Users/Details" asp-route-id="@user.Id" class="btn btn-custom btn-outline-custom btn-sm">Jeux joués</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

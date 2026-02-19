@@ -1,0 +1,52 @@
+@page
+@model GameTracker.Web.Pages.Users.AddSessionModel
+@{
+    ViewData["Title"] = "Ajouter une session";
+}
+
+<p><a asp-page="/Users/Details" asp-route-id="@Model.UserId" class="btn-back">← Retour</a></p>
+
+<div class="page-header">
+    <h1 class="page-title">Ajouter une session</h1>
+    <p class="page-subtitle">Utilisateur : @Model.Username</p>
+</div>
+
+@if (Model.GamesCount == 0)
+{
+    <div class="card-custom p-4">
+        <p class="text-muted mb-0">Aucun jeu disponible dans le catalogue. Ajoutez des jeux d'abord.</p>
+        <a asp-page="/Games/Index" class="btn btn-custom btn-outline-custom mt-3">Voir les jeux</a>
+    </div>
+}
+else if (Model.GamesAvailableCount == 0)
+{
+    <div class="card-custom p-4">
+        <p class="text-muted mb-0">Cet utilisateur a déjà une session pour tous les jeux. Utilisez « Modifier » pour mettre à jour les heures.</p>
+        <a asp-page="/Users/Details" asp-route-id="@Model.UserId" class="btn btn-custom btn-outline-custom mt-3">Retour</a>
+    </div>
+}
+else
+{
+<form method="post" class="form-custom">
+    <input type="hidden" asp-for="Input.UserId" />
+    <div class="mb-3">
+        <label asp-for="Input.GameId" class="form-label">Jeu *</label>
+        <select asp-for="Input.GameId" asp-items="Model.Games" class="form-select" required>
+            <option value="">— Sélectionner —</option>
+        </select>
+        <span asp-validation-for="Input.GameId" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="Input.Date" class="form-label">Date *</label>
+        <input asp-for="Input.Date" type="date" class="form-control" required />
+    </div>
+    <div class="mb-4">
+        <label asp-for="Input.HoursPlayed" class="form-label">Heures jouées *</label>
+        <input asp-for="Input.HoursPlayed" type="number" class="form-control" min="0" required />
+    </div>
+    <div class="form-actions">
+        <button type="submit" class="btn btn-custom btn-primary-custom">Ajouter</button>
+        <a asp-page="/Users/Details" asp-route-id="@Model.UserId" class="btn btn-custom btn-outline-custom">Annuler</a>
+    </div>
+</form>
+}

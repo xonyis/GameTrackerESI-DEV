@@ -1,0 +1,35 @@
+@page
+@model GameTracker.Web.Pages.Studios.IndexModel
+@{
+    ViewData["Title"] = "Studios";
+}
+
+<div class="page-header d-flex justify-content-between align-items-start flex-wrap gap-2">
+    <div>
+        <h1 class="page-title">Studios</h1>
+        <p class="page-subtitle">Éditeurs de jeux</p>
+    </div>
+    <a asp-page="/Studios/Create" class="btn btn-custom btn-primary-custom">+ Ajouter</a>
+</div>
+<div class="card-custom">
+    <table class="table table-custom mb-0">
+        <thead>
+            <tr>
+                <th>Nom</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var studio in Model.Studios)
+            {
+                <tr>
+                    <td><strong>@studio.Name</strong></td>
+                    <td class="text-end">
+                        <a asp-page="/Studios/Edit" asp-route-id="@studio.Id" class="btn btn-custom btn-outline-custom btn-sm">Modifier</a>
+                        <a asp-page="/Studios/Delete" asp-route-id="@studio.Id" class="btn btn-custom btn-outline-custom btn-sm">Supprimer</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

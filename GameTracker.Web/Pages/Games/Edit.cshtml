@@ -1,0 +1,55 @@
+@page
+@model GameTracker.Web.Pages.Games.EditModel
+@{
+    ViewData["Title"] = "Modifier le jeu";
+}
+
+<p><a asp-page="/Games/Index" class="btn-back">← Retour à la liste</a></p>
+
+<div class="page-header">
+    <h1 class="page-title">Modifier le jeu</h1>
+</div>
+
+<form method="post" class="form-custom">
+    <input type="hidden" asp-for="Input.Id" />
+    <div class="mb-3">
+        <label asp-for="Input.Title" class="form-label">Titre *</label>
+        <input asp-for="Input.Title" class="form-control" maxlength="200" required />
+        <span asp-validation-for="Input.Title" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="Input.ReleaseYear" class="form-label">Année de sortie</label>
+        <input asp-for="Input.ReleaseYear" type="number" class="form-control" min="1900" max="2100" />
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Catégories * (au moins une)</label>
+        <div class="studio-checkboxes">
+            @foreach (var cat in Model.Categories)
+            {
+                var isChecked = Model.Input.CategoryIds.Contains(cat.Id);
+                <label class="studio-check">
+                    <input type="checkbox" name="Input.CategoryIds" value="@cat.Id" @(isChecked ? "checked" : "") />
+                    <span>@cat.Name</span>
+                </label>
+            }
+        </div>
+        <span asp-validation-for="Input.CategoryIds" class="text-danger"></span>
+    </div>
+    <div class="mb-4">
+        <label class="form-label">Studios</label>
+        <div class="studio-checkboxes">
+            @foreach (var studio in Model.Studios)
+            {
+                var isChecked = Model.Input.StudioIds.Contains(studio.Id);
+                <label class="studio-check">
+                    <input type="checkbox" name="Input.StudioIds" value="@studio.Id" @(isChecked ? "checked" : "") />
+                    <span>@studio.Name</span>
+                </label>
+            }
+        </div>
+    </div>
+    <div class="form-actions">
+        <button type="submit" class="btn btn-custom btn-primary-custom">Enregistrer</button>
+        <a asp-page="/Games/Index" class="btn btn-custom btn-outline-custom">Annuler</a>
+    </div>
+</form>
