@@ -4,7 +4,7 @@ Mini-application pour recenser les jeux vidéo, studios, catégories et sessions
 
 ## Prérequis
 
-- [.NET SDK](https://dotnet.microsoft.com/download) (8 ou 10)
+- [.NET SDK](https://dotnet.microsoft.com/download) (10)
 
 ## Lancement
 
