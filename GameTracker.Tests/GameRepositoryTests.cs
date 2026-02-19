@@ -113,7 +113,7 @@ public sealed class GameRepositoryTests
     }
 
     [TestMethod]
-    public void CreateGameWithStudio_GetByIdWithRelations_ShouldHaveCategoryAndStudios()
+    public void GetGameInfos_GetByIdWithRelations_ShouldHaveCategoryAndStudios()
     {
         var category = new Category { Name = "Aventure" };
         _categoryRepo.Add(category);
@@ -127,8 +127,9 @@ public sealed class GameRepositoryTests
         var gameFull = _gameRepo.GetByIdWithRelations(game.Id);
         Assert.IsNotNull(gameFull);
         Assert.IsNotNull(gameFull!.Categories);
-        Assert.IsTrue(gameFull.Categories.Any(c => c.Name == "Aventure"));
-        Assert.IsTrue(gameFull.Studios.Any(s => s.Name == "Bethesda"));
+        Assert.IsTrue(gameFull.Categories.Any(c => c.Name == "Aventure"), "La catégorie doit être chargée");
+        Assert.IsNotNull(gameFull.Studios);
+        Assert.IsTrue(gameFull.Studios.Any(s => s.Name == "Bethesda"), "Les studios doivent être chargés");
     }
 
     [TestMethod]
@@ -143,5 +144,35 @@ public sealed class GameRepositoryTests
 
         var found = _context.Games.Find(game.Id);
         Assert.IsNull(found);
+    }
+    [TestMethod]
+    public void AddGame_WithMultipleCategories_ShouldContainAllCategories()
+    {
+        // Arrange
+        var category1 = new Category { Name = "Aventure" };
+        var category2 = new Category { Name = "RPG" };
+        _categoryRepo.Add(category1);
+        _categoryRepo.Add(category2);
+        // _categoryRepo.Add(category3);
+
+        var game = new Game
+        {
+            Title = "Hollow Knight",
+            ReleaseYear = 2017,
+            // À commenter pour que le test passe
+            Categories = new List<Category> { category1, category2, category3 }
+            //  Categories = new List<Category> { category1, category2 }
+
+        };
+
+        _gameRepo.Add(game);
+
+        var found = _gameRepo.GetByIdWithRelations(game.Id);
+
+        Assert.IsNotNull(found);
+        Assert.AreEqual(2, found!.Categories.Count);
+        Assert.IsTrue(found.Categories.Any(c => c.Name == "Aventure"));
+        Assert.IsTrue(found.Categories.Any(c => c.Name == "RPG"));
+
     }
 }

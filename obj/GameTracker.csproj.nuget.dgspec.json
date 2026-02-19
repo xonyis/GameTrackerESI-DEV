@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/Users/corentinadele/Desktop/Entity/Workshop noté/GameTracker.csproj": {}
+    "/Users/julia/Desktop/Identity/GameTrackerESI-DEV/GameTracker.csproj": {}
   },
   "projects": {
-    "/Users/corentinadele/Desktop/Entity/Workshop noté/GameTracker.csproj": {
+    "/Users/julia/Desktop/Identity/GameTrackerESI-DEV/GameTracker.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/corentinadele/Desktop/Entity/Workshop noté/GameTracker.csproj",
+        "projectUniqueName": "/Users/julia/Desktop/Identity/GameTrackerESI-DEV/GameTracker.csproj",
         "projectName": "GameTracker",
-        "projectPath": "/Users/corentinadele/Desktop/Entity/Workshop noté/GameTracker.csproj",
-        "packagesPath": "/Users/corentinadele/.nuget/packages/",
-        "outputPath": "/Users/corentinadele/Desktop/Entity/Workshop noté/obj/",
+        "projectPath": "/Users/julia/Desktop/Identity/GameTrackerESI-DEV/GameTracker.csproj",
+        "packagesPath": "/Users/julia/.nuget/packages/",
+        "outputPath": "/Users/julia/Desktop/Identity/GameTrackerESI-DEV/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/corentinadele/.nuget/NuGet/NuGet.Config"
+          "/Users/julia/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net10.0"
@@ -75,7 +75,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/10.0.102/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/10.0.103/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.CSharp": "(,4.7.32767]",
             "Microsoft.VisualBasic": "(,10.4.32767]",

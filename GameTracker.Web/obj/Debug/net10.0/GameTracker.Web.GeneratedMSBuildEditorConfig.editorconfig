@@ -11,101 +11,101 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = GameTracker.Web
 build_property.RootNamespace = GameTracker.Web
-build_property.ProjectDir = /Users/corentinadele/Desktop/Entity/Workshop noté/GameTracker.Web/
+build_property.ProjectDir = /Users/julia/Desktop/Identity/GameTrackerESI-DEV/GameTracker.Web/
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 9.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = /Users/corentinadele/Desktop/Entity/Workshop noté/GameTracker.Web
+build_property.MSBuildProjectDirectory = /Users/julia/Desktop/Identity/GameTrackerESI-DEV/GameTracker.Web
 build_property._RazorSourceGeneratorDebug = 
 build_property.EffectiveAnalysisLevelStyle = 10.0
 build_property.EnableCodeStyleSeverity = 
 
-[/Users/corentinadele/Desktop/Entity/Workshop noté/GameTracker.Web/Pages/Categories/Create.cshtml]
+[/Users/julia/Desktop/Identity/GameTrackerESI-DEV/GameTracker.Web/Pages/Categories/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQ2F0ZWdvcmllcy9DcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/corentinadele/Desktop/Entity/Workshop noté/GameTracker.Web/Pages/Categories/Delete.cshtml]
+[/Users/julia/Desktop/Identity/GameTrackerESI-DEV/GameTracker.Web/Pages/Categories/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQ2F0ZWdvcmllcy9EZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/corentinadele/Desktop/Entity/Workshop noté/GameTracker.Web/Pages/Categories/Edit.cshtml]
+[/Users/julia/Desktop/Identity/GameTrackerESI-DEV/GameTracker.Web/Pages/Categories/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQ2F0ZWdvcmllcy9FZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/corentinadele/Desktop/Entity/Workshop noté/GameTracker.Web/Pages/Categories/Index.cshtml]
+[/Users/julia/Desktop/Identity/GameTrackerESI-DEV/GameTracker.Web/Pages/Categories/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQ2F0ZWdvcmllcy9JbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/corentinadele/Desktop/Entity/Workshop noté/GameTracker.Web/Pages/Error.cshtml]
+[/Users/julia/Desktop/Identity/GameTrackerESI-DEV/GameTracker.Web/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/corentinadele/Desktop/Entity/Workshop noté/GameTracker.Web/Pages/Games/Create.cshtml]
+[/Users/julia/Desktop/Identity/GameTrackerESI-DEV/GameTracker.Web/Pages/Games/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvR2FtZXMvQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/corentinadele/Desktop/Entity/Workshop noté/GameTracker.Web/Pages/Games/Delete.cshtml]
+[/Users/julia/Desktop/Identity/GameTrackerESI-DEV/GameTracker.Web/Pages/Games/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvR2FtZXMvRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/corentinadele/Desktop/Entity/Workshop noté/GameTracker.Web/Pages/Games/Details.cshtml]
+[/Users/julia/Desktop/Identity/GameTrackerESI-DEV/GameTracker.Web/Pages/Games/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvR2FtZXMvRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/corentinadele/Desktop/Entity/Workshop noté/GameTracker.Web/Pages/Games/Edit.cshtml]
+[/Users/julia/Desktop/Identity/GameTrackerESI-DEV/GameTracker.Web/Pages/Games/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvR2FtZXMvRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/corentinadele/Desktop/Entity/Workshop noté/GameTracker.Web/Pages/Games/Index.cshtml]
+[/Users/julia/Desktop/Identity/GameTrackerESI-DEV/GameTracker.Web/Pages/Games/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvR2FtZXMvSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/corentinadele/Desktop/Entity/Workshop noté/GameTracker.Web/Pages/Index.cshtml]
+[/Users/julia/Desktop/Identity/GameTrackerESI-DEV/GameTracker.Web/Pages/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/corentinadele/Desktop/Entity/Workshop noté/GameTracker.Web/Pages/Shared/_Layout.cshtml]
+[/Users/julia/Desktop/Identity/GameTrackerESI-DEV/GameTracker.Web/Pages/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvU2hhcmVkL19MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/corentinadele/Desktop/Entity/Workshop noté/GameTracker.Web/Pages/Studios/Create.cshtml]
+[/Users/julia/Desktop/Identity/GameTrackerESI-DEV/GameTracker.Web/Pages/Studios/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvU3R1ZGlvcy9DcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/corentinadele/Desktop/Entity/Workshop noté/GameTracker.Web/Pages/Studios/Delete.cshtml]
+[/Users/julia/Desktop/Identity/GameTrackerESI-DEV/GameTracker.Web/Pages/Studios/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvU3R1ZGlvcy9EZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/corentinadele/Desktop/Entity/Workshop noté/GameTracker.Web/Pages/Studios/Edit.cshtml]
+[/Users/julia/Desktop/Identity/GameTrackerESI-DEV/GameTracker.Web/Pages/Studios/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvU3R1ZGlvcy9FZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/corentinadele/Desktop/Entity/Workshop noté/GameTracker.Web/Pages/Studios/Index.cshtml]
+[/Users/julia/Desktop/Identity/GameTrackerESI-DEV/GameTracker.Web/Pages/Studios/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvU3R1ZGlvcy9JbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/corentinadele/Desktop/Entity/Workshop noté/GameTracker.Web/Pages/Users/AddSession.cshtml]
+[/Users/julia/Desktop/Identity/GameTrackerESI-DEV/GameTracker.Web/Pages/Users/AddSession.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvVXNlcnMvQWRkU2Vzc2lvbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/corentinadele/Desktop/Entity/Workshop noté/GameTracker.Web/Pages/Users/Details.cshtml]
+[/Users/julia/Desktop/Identity/GameTrackerESI-DEV/GameTracker.Web/Pages/Users/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvVXNlcnMvRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/corentinadele/Desktop/Entity/Workshop noté/GameTracker.Web/Pages/Users/EditSession.cshtml]
+[/Users/julia/Desktop/Identity/GameTrackerESI-DEV/GameTracker.Web/Pages/Users/EditSession.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvVXNlcnMvRWRpdFNlc3Npb24uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/corentinadele/Desktop/Entity/Workshop noté/GameTracker.Web/Pages/Users/Index.cshtml]
+[/Users/julia/Desktop/Identity/GameTrackerESI-DEV/GameTracker.Web/Pages/Users/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvVXNlcnMvSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/corentinadele/Desktop/Entity/Workshop noté/GameTracker.Web/Pages/_ViewImports.cshtml]
+[/Users/julia/Desktop/Identity/GameTrackerESI-DEV/GameTracker.Web/Pages/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/corentinadele/Desktop/Entity/Workshop noté/GameTracker.Web/Pages/_ViewStart.cshtml]
+[/Users/julia/Desktop/Identity/GameTrackerESI-DEV/GameTracker.Web/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
